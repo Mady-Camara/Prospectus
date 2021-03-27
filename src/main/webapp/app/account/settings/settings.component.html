@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <h2 *ngIf="account">
-        User settings for [<strong>{{ account.login }}</strong
+        propriétés utilisateur pour [<strong>{{ account.login }}</strong
         >]
       </h2>
 
@@ -14,7 +14,7 @@
 
       <form name="form" role="form" (ngSubmit)="save()" [formGroup]="settingsForm" *ngIf="account" novalidate>
         <div class="form-group">
-          <label class="form-control-label" for="firstName">First Name</label>
+          <label class="form-control-label" for="firstName">Prenom</label>
           <input
             type="text"
             class="form-control"
@@ -45,7 +45,7 @@
         </div>
 
         <div class="form-group">
-          <label class="form-control-label" for="lastName">Last Name</label>
+          <label class="form-control-label" for="lastName">Nom</label>
           <input
             type="text"
             class="form-control"
@@ -100,7 +100,7 @@
           </div>
         </div>
 
-        <button type="submit" [disabled]="settingsForm.invalid" class="btn btn-primary" data-cy="submit">Save</button>
+        <button type="submit" [disabled]="settingsForm.invalid" class="btn btn-primary" data-cy="submit">Valider</button>
       </form>
     </div>
   </div>
